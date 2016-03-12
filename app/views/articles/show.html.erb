@@ -1,0 +1,8 @@
+<h2> Article </h2>
+<p>
+    title: <%= @article.title %>
+</p>
+<p>
+    description: <%= @article.description %>
+</p>
+<%= link_to article_path(params[(:id-1)]) %> | <%= link_to article_path(params[(:id+1) ]) %>
