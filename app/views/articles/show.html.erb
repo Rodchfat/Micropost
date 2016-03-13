@@ -5,3 +5,11 @@
 <p>
     description: <%= @article.description %>
 </p>
+<ul>
+    <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+</ul>
+<ul>
+    <li><%= link_to @article.user.username, user_path(@article.user) %></li>
+    <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
+
+</ul>
